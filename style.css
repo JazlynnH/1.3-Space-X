@@ -1,0 +1,87 @@
+/* Reset styles to make sure there is consistent rendering across all browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Styling for the body of the document */
+body {
+    background: #000; 
+    color: #ffbe00;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8vw; /* Adjustment settings for font size */
+    line-height: 1.5;
+}
+/* Styling for the main container holding the content */
+.container {
+    margin: 0 auto;
+    perspective: 380;
+    perspective-origin: bottom;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: visible;
+    transform: scaleY(0.9);
+}
+/* Styling for the credits section which holds the headings and paragraphs */
+.credits {
+    position: absolute;
+    top: 0;
+    left: 13%;
+    right: 13%;
+    height: 100%;
+}
+/* Styling for headings (h1 and h2) */
+.headings {
+    margin-bottom: 2rem; /* This adjust the spacing between headings and paragraphs */
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffbe00; /* Adjust color for headings */
+}
+
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffbe00; /* Adjust color for subheadings */
+}
+/* Styling for paragraphs */
+p {
+    padding: 1rem; /* Add padding to paragraphs*/
+    margin-bottom: 1.5rem; /* Adjust spacing between paragraphs */
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #ffbe00; /* Border around paragraphs */
+    border-radius: 10px; /* This creates rounded corners */
+}
+/* Styling for buttons */
+button {
+    background-color: #ffbe00; /* Button background color */
+    color: #000; /* Button text color */
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5vw; /* Adjust font size for buttons */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+/* Styling for the output div */
+#output {
+    text-align: center; /* Center the output message */
+    margin-top: 2rem; /* Add spacing between Enter button and output */
+}
+/* Styling for the username placeholder */
+#usernamePlaceholder {
+    color: #ffbe00; /* Adjust color for the username placeholder */
+}
+/* Styling for the image */
+.icon {
+    width: 15.5rem; /* Adjust the width of the image */
+    height: auto; 
+    margin-right: 0.5rem; /* Add some spacing between the icon and text */
+    vertical-align: middle; 
+}

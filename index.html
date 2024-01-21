@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--This sents the language-->
+    <head>
+        <!--Setting character encoding for the document-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- This is to define the compatibility mode for Internet Explorer in this case "edge" this will allow things to run more smoothly-->
+        <!--Linking Stylesheet for communication between the two files when styling-->
+        <link rel="stylesheet" href="style.css">
+        <!--JavaScript functions for welcome button-->
+        <script>
+        //function to prompt users for their name
+        function getUsername() {
+            //prompt user for input
+            var userName = prompt("What is your name?");
+            //creating a welcome message for users
+            var welcomeMessage = "Welcome " + userName + " to Starbase 13!";
+            // Display a pop-up alert with the welcome message and the entered username
+            alert(welcomeMessage);
+            // Replace the [Your Name] placeholder with the entered username
+            document.getElementById("usernamePlaceholder").innerText = userName;
+        }
+
+        //function to start epic background music
+        function startBackgroundMusic() {
+            //Getting the audio element by its ID
+            var audio = document.getElementById('backgroundMusic');
+            //play the audio
+            audio.play();
+        }
+        </script>
+    </head>
+
+    <body>
+        <!--Adding the audio element for background music-->
+        <audio id="backgroundMusic">
+            <source src="StarWarsTrack.mp3" type="audio/mp3">
+        </audio>
+        <!--This is the button that starts the background music when pressed-->
+        <button onclick="startBackgroundMusic()">Click 4 Epic Music</button>
+        <!--Main container for the content such as text-->
+        <div class="container">
+            <!--Credits section with the headings and paragraphs-->
+            <div class="credits">
+                <!--Headings with a welcome message and starbase13 image-->
+                <div class="headings">
+                    <h1>Welcome</h1>
+                    <h2> to StarBase13</h2>
+                    <img src="R.png" alt="R Icon" class="icon">
+                </div>
+                <!--Introduction storyline-->
+                <p>
+                    Greetings, I am HAL your personal assistant aboard StarBase13, What is your name? 
+                    <button onclick="getUsername()">Enter</button>
+                </p>
+                <p>As your shuttle gracefully approaches SpaceX's cutting-edge space station, 
+                    Starbase 13, the vast expanse of the cosmos unfolds before your eyes. 
+                    Gleaming in the cosmic twilight, Starbase 13 stands as a beacon of human ingenuity, a celestial marvel nestled among the stars. 
+                    The outer structure shimmers with advanced solar panels, harnessing the energy of distant suns to power the station's intricate systems.
+                </p>
+                <p>As you draw nearer, you notice the sleek docking bays opening like cosmic petals, inviting visitors from across the galaxy. 
+                    A symphony of lights dances along the docking arms, creating a mesmerizing display that mirrors the celestial beauty surrounding this space sanctuary. 
+                    The station's exterior is adorned with futuristic artwork, a testament to the interstellar collaboration that birthed Starbase 13.
+                </p>
+                <p>Upon entering, an artificial intelligence named HAL extends a digital greeting, its voice resonating through the corridors. 
+                    "Greetings, I am HAL pleasure to be of your assistance" it echoes. The journey continues as you input your name into the station's system, instantly feeling a sense of belonging. 
+                    Starbase 13's walls hum with the pulse of life as diverse cultures, creating a microcosm of intergalactic unity.
+                </p>
+                <!--Placeholder for a welcome message with the username of user choice-->
+                <p id="welcomeMessage">
+                    Finally, a holographic projection welcomes you personally, "Hi <span id="usernamePlaceholder">[Your Name]</span>, welcome to Starbase 13."
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
+<!--end of code-->
